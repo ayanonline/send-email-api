@@ -30,7 +30,7 @@ This is a Node.js project that demonstrates how to send emails using the Nodemai
 - text: Email content
 
 ## Sending a Request (React.js)
-
+```jsx
 import axios from 'axios';
 
 const handleSendEmail = async () => {
@@ -47,3 +47,4 @@ const handleSendEmail = async () => {
 };
 
 handleSendEmail();
+```
