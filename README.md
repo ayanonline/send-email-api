@@ -31,20 +31,19 @@ This is a Node.js project that demonstrates how to send emails using the Nodemai
 
 ## Sending a Request (React.js)
 
--import axios from 'axios';
+import axios from 'axios';
 
--const handleSendEmail = async () => {
+const handleSendEmail = async () => {
+  try {
+    await axios.post('/send-email', {
+      to: 'recipient@example.com',
+      subject: 'Hello from React',
+      text: 'Hello, this is a test email from React using Axios!'
+    });
+    console.log('Email sent successfully!');
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
+};
 
-- try {
-- await axios.post('/send-email', {
--      to: 'recipient@example.com',
--      subject: 'Hello from React',
--      text: 'Hello, this is a test email from React using Axios!'
-- });
-- console.log('Email sent successfully!');
-- } catch (error) {
-- console.error('Error sending email:', error);
-- }
-- };
-
-- handleSendEmail();
+handleSendEmail();
