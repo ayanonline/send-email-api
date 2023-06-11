@@ -10,8 +10,8 @@ This is a Node.js project that demonstrates how to send emails using the Nodemai
 
 ## Requirements
 
-- Node.js (version X.X.X)
-- NPM (version X.X.X)
+- Node.js (version 18.13.0)
+- NPM (version 8.19.3)
 
 ## Configuration
 
