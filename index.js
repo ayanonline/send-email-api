@@ -17,6 +17,14 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.json());
 
+// health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "API is up and running",
+  });
+});
+
 // API endpoint to send email
 app.post("/send-email", (req, res) => {
   const { to, subject, text } = req.body;
